@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
+import { LVRModule } from './modules/lvr/lvr.module';
 
 @Module({
-  imports: [],
+  imports: [LVRModule],
   controllers: [],
   providers: [],
 })
