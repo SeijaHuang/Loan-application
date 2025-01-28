@@ -1,11 +1,11 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
-import { CallLVRDto } from './dto/CalLVRDto.dto';
-import { MESSAGES } from 'src/constants/message.constant';
+import { CalLVRDto } from './dto/CalLVRDto.dto';
+import { MESSAGES } from '../../constants/message.constant';
 
 @Injectable()
 export class LVRService {
   private readonly _fixNumber: number = 2;
-  async calLVR(calLVRDto: CallLVRDto): Promise<string> {
+  async calLVR(calLVRDto: CalLVRDto): Promise<string> {
     const {
       loanAmount,
       cashOutAmount,

@@ -1,6 +1,6 @@
 import { IsNotEmpty, IsNumber, IsOptional, Min } from 'class-validator';
 
-export class CallLVRDto {
+export class CalLVRDto {
   @Min(1)
   @IsNumber()
   @IsNotEmpty()
@@ -9,7 +9,7 @@ export class CallLVRDto {
   @Min(0)
   @IsNumber()
   @IsOptional()
-  cashOutAmount: number;
+  cashOutAmount?: number;
 
   @Min(1)
   @IsNumber()
@@ -19,5 +19,5 @@ export class CallLVRDto {
   @Min(0)
   @IsNumber()
   @IsOptional()
-  propertyValuation: number;
+  propertyValuation?: number;
 }
